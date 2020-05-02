@@ -5,19 +5,19 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
+export default function ChatScreen() {
   return (
     <View style={styles.container}>
       {/* <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         
       </ScrollView> */}
 
-      <Text>Home</Text>
+      <Text>Chat</Text>
     </View>
   );
 }
 
-HomeScreen.navigationOptions = {
+ChatScreen.navigationOptions = {
   header: null,
 };
 
