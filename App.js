@@ -61,7 +61,6 @@ export default function App(props) {
   const _renderItem = ({ item }) => {
     return (
       <View key={item.key} style={styles.slide}>
-        <Text style={styles.title}>{item.title}</Text>
         <Image style={styles.image} source={item.image} />
         <Text style={styles.text}>{item.text}</Text>
       </View>
@@ -75,13 +74,42 @@ export default function App(props) {
     setOnboarding(true);
   }
 
-  const _keyExtractor = (item) => item.title;
+  const _renderDoneButton = () => {
+    return (
+      <Text style={styles.buttonDone}>
+        Sair
+      </Text>
+    );
+  };
+
+  const _renderNextButton = () => {
+    return (
+      <Text style={styles.buttonDone}>
+        Próximo
+      </Text>
+    );
+  };
+
+  const _keyExtractor = (item) => item.key;
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return null;
   } else if(!onboarding) {
     return (    
-      <AppIntroSlider keyExtractor={_keyExtractor} renderItem={_renderItem} data={slides} onDone={_onDone}/>
+      <AppIntroSlider 
+        keyExtractor={_keyExtractor} 
+        renderItem={_renderItem} 
+        data={slides} 
+        onDone={_onDone}
+        renderNextButton={_renderNextButton}
+        renderDoneButton={_renderDoneButton}
+        dotStyle={
+          {backgroundColor: 'red'}
+        }
+        activeDotStyle={
+          {backgroundColor: 'blue'}
+        }
+      />
     );
   } else {
     return (
@@ -127,4 +155,7 @@ const styles = StyleSheet.create({
     color: '#A6BCD0',
     textAlign: 'center',
   },
+  buttonDone: {
+    color: '#A6BCD0'
+  }
 });
