@@ -11,6 +11,8 @@ import SimpleOnboarding from './components/Onboarding';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
 
+/* import GlobalStyle from './GlobalStyle'; */
+
 const Stack = createStackNavigator();
 
 export default function App(props) {
@@ -56,19 +58,25 @@ export default function App(props) {
     return null;
   } else if(!onboarding) {
     return (
-      <SimpleOnboarding></SimpleOnboarding>
+      <SimpleOnboarding />     
     );
   } else {
     return (
+<>
+     {/*  <GlobalStyle /> */}
       <View style={styles.container}>
         
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
+
+      </>
+
     )
   }
 }
