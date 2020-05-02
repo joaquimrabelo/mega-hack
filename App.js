@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StatusBar, StyleSheet, View, Image } from 'react-native';
 import { SplashScreen } from 'expo';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
@@ -8,6 +8,27 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
+
+import Onboarding from 'react-native-onboarding-swiper';
+
+const Simple = () => (
+  <Onboarding
+    pages={[
+      {
+        backgroundColor: '#fff',
+        image: <Image source={require('./assets/images/onboarding1.png')} />,
+        title: 'Pagina 1',
+        subtitle: 'Done with React Native Onboarding Swiper',
+      },
+      {
+        backgroundColor: '#fff',
+        image: <Image source={require('./assets/images/onboarding2.png')} />,
+        title: 'Pagina 2',
+        subtitle: 'This is the subtitle that sumplements the title.',
+      },
+    ]}
+  />
+);
 
 const Stack = createStackNavigator();
 
@@ -47,8 +68,11 @@ export default function App(props) {
     return null;
   } else {
     return (
+      
       <View style={styles.container}>
+        
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        <Simple></Simple>
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
