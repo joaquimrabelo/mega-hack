@@ -25,9 +25,8 @@ const SimpleOnboarding = () => (
     pages={[
       {
         backgroundColor: '#fff',
-        color: 'red',
         image: <Image source={require('../assets/images/onboarding1.png')} />,
-        title: 'Explicação sobre o app 1',
+        title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         subtitle: (
           <Button 
               title={'Pular'}
@@ -45,7 +44,7 @@ const SimpleOnboarding = () => (
       {
         backgroundColor: '#fff',
         image: <Image source={require('../assets/images/onboarding2.png')} />,
-        title: 'Explicação sobre o app 2',
+        title: 'Donec eget arcu elementum. Nulla facilisi.',
         subtitle: (
           <StyledButton
             title={'Começar'}          
