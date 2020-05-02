@@ -8,7 +8,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import 'localstorage-polyfill';
 import AppIntroSlider from 'react-native-app-intro-slider';
 
-import SimpleOnboarding from './components/Onboarding';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
 
@@ -81,18 +80,14 @@ export default function App(props) {
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return null;
   } else if(!onboarding) {
-    return (
-      //<SimpleOnboarding />     
+    return (    
       <AppIntroSlider keyExtractor={_keyExtractor} renderItem={_renderItem} data={slides} onDone={_onDone}/>
     );
   } else {
     return (
     <>
-     {/*  <GlobalStyle /> */}
       <View style={styles.container}>
-        
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
@@ -109,13 +104,14 @@ export default function App(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blue',
+    backgroundColor: '#fff',
   },
   slide: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'blue',
+    backgroundColor: '#fff',
+   
   },
   image: {
     width: 320,
@@ -123,12 +119,12 @@ const styles = StyleSheet.create({
     marginVertical: 32,
   },
   text: {
-    color: 'rgba(255, 255, 255, 0.8)',
+    color: '#A6BCD0',
     textAlign: 'center',
   },
   title: {
     fontSize: 22,
-    color: 'white',
+    color: '#A6BCD0',
     textAlign: 'center',
   },
 });
