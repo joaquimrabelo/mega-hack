@@ -5,30 +5,11 @@ import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import 'localstorage-polyfill';
 
+import SimpleOnboarding from './components/Onboarding';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
-
-import Onboarding from 'react-native-onboarding-swiper';
-
-const Simple = () => (
-  <Onboarding
-    pages={[
-      {
-        backgroundColor: '#fff',
-        image: <Image source={require('./assets/images/onboarding1.png')} />,
-        title: 'Pagina 1',
-        subtitle: 'Done with React Native Onboarding Swiper',
-      },
-      {
-        backgroundColor: '#fff',
-        image: <Image source={require('./assets/images/onboarding2.png')} />,
-        title: 'Pagina 2',
-        subtitle: 'This is the subtitle that sumplements the title.',
-      },
-    ]}
-  />
-);
 
 const Stack = createStackNavigator();
 
@@ -37,6 +18,13 @@ export default function App(props) {
   const [initialNavigationState, setInitialNavigationState] = React.useState();
   const containerRef = React.useRef();
   const { getInitialState } = useLinking(containerRef);
+  const { onboarding, setOnboarding } = React.useState(() => {
+    const showBoarding =  localStorage.getItem('@megaHack.onboarding');
+    if (showBoarding) {
+      return true;
+    }
+    return false;
+  });
 
   // Load any resources or data that we need prior to rendering the app
   React.useEffect(() => {
@@ -66,20 +54,22 @@ export default function App(props) {
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
     return null;
+  } else if(!onboarding) {
+    return (
+      <SimpleOnboarding></SimpleOnboarding>
+    );
   } else {
     return (
-      
       <View style={styles.container}>
         
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-        <Simple></Simple>
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
           <Stack.Navigator>
             <Stack.Screen name="Root" component={BottomTabNavigator} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
-    );
+    )
   }
 }
 
