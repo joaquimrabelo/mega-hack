@@ -5,6 +5,12 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 
+import IconHome from '../assets/images/home.png';
+import IconShop from '../assets/images/supermercados.png';
+import IconChat from '../assets/images/chat.png';
+import IconCart from '../assets/images/carrinho.png'
+import IconConfig from '../assets/images/configuracoes.png';
+
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
 
@@ -20,16 +26,40 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: '',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconHome} />,
         }}
       />
       <BottomTab.Screen
-        name="Links"
+        name="Shop"
         component={LinksScreen}
         options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          title: '',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconShop} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Chat"
+        component={LinksScreen}
+        options={{
+          title: '',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconChat} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Cart"
+        component={LinksScreen}
+        options={{
+          title: '',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconCart} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Config"
+        component={LinksScreen}
+        options={{
+          title: '',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconConfig} />,
         }}
       />
     </BottomTab.Navigator>
