@@ -1,12 +1,25 @@
-import { Ionicons } from '@expo/vector-icons';
 import * as React from 'react';
-import { Image } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
-import Colors from '../constants/Colors';
-
-export default function TabBarIcon({icon}) {
+export function TabBarIcon({icon}) {
   return (
-    <Image source={icon}
-    />
+    <Image style={styles.icon} source={icon} />
   );
 }
+
+export function TabBarIconMain({icon}) {
+  return (
+    <Image style={styles.iconMain} source={icon} />
+  );
+}
+
+const styles = StyleSheet.create({
+  icon: {
+    width: 30,
+    height: 30
+  },
+  iconMain: {
+    width: 50,
+    height: 50
+  }
+})

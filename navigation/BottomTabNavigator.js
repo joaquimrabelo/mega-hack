@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 
-import TabBarIcon from '../components/TabBarIcon';
+import {TabBarIcon, TabBarIconMain} from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 
@@ -19,9 +19,9 @@ export default function BottomTabNavigator({ navigation, route }) {
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
   navigation.setOptions({ headerTitle: getHeaderTitle(route) });
-
+  
   return (
-    <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
+    <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME} >
       <BottomTab.Screen
         name="Home"
         component={HomeScreen}
@@ -43,14 +43,17 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={LinksScreen}
         options={{
           title: '',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconChat} />,
+          tabBarIcon: ({ focused }) => <TabBarIconMain focused={focused} icon={IconChat} />,
         }}
       />
       <BottomTab.Screen
         name="Cart"
         component={LinksScreen}
         options={{
-          title: '',
+          title: 'asdf',
+          tabBarOptions: {
+            showLabel: false
+          },
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconCart} />,
         }}
       />
@@ -58,7 +61,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Config"
         component={LinksScreen}
         options={{
-          title: '',
+          title: 'df',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconConfig} />,
         }}
       />
