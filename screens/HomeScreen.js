@@ -17,11 +17,9 @@ import card4 from '../assets/images/card4.png';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      {/* <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        
-      </ScrollView> */}
 
       <ImageBackground source={bgMap} style={styles.image}>
+
         <Text style={styles.mainTitle}>O que você procura?</Text>
         <TextInput 
           style={styles.search}
@@ -34,6 +32,7 @@ export default function HomeScreen() {
         {/* <Ionicons name="ios-keyboard-voice" size={22} color="rgba(0,0,0,0.35)" /> */}
         
         {/* <Image source={card1} style={styles.card} />  */}
+
       </ImageBackground>
 
       
@@ -42,7 +41,7 @@ export default function HomeScreen() {
 }
 
 HomeScreen.navigationOptions = {
-  header: null,
+  header: { visible: false }
 };
 
 /* function handleLearnMorePress() {
@@ -90,5 +89,4 @@ const styles = StyleSheet.create({
     color: '#748A9D',
     fontSize: 16,
   }
-  
 });

@@ -115,10 +115,16 @@ export default function App(props) {
     return (
     <>
       <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        <StatusBar barStyle="light-content"/>
         <NavigationContainer ref={containerRef} initialState={initialNavigationState}>
-          <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
+          <Stack.Navigator headerMode="none">
+            <Stack.Screen 
+              name="Root" 
+              component={BottomTabNavigator}
+              navigationOptions={{
+                header: null,
+              }}
+            />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
