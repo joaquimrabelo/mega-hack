@@ -13,8 +13,6 @@ import useLinking from './navigation/useLinking';
 
 import slides from './components/IntroSlider';
 
-/* import GlobalStyle from './GlobalStyle'; */
-
 const Stack = createStackNavigator();
 
 export default function App(props) {

@@ -5,14 +5,12 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { SliderBox } from 'react-native-image-slider-box';
 
 import { MonoText } from '../components/StyledText';
 import bgMap from '../assets/images/map.png';
 
-import card1 from '../assets/images/card1.png';
-import card2 from '../assets/images/card2.png';
-import card3 from '../assets/images/card3.png';
-import card4 from '../assets/images/card4.png';
+import imageSlider from '../components/HomeSlider';
 
 export default function HomeScreen() {
   return (
@@ -30,8 +28,6 @@ export default function HomeScreen() {
         <Icon name="microphone" size={20} color="#900" />
         {/* <Ionicons name="md-search" size={22} color="rgba(0,0,0,0.35)" /> */}
         {/* <Ionicons name="ios-keyboard-voice" size={22} color="rgba(0,0,0,0.35)" /> */}
-        
-        {/* <Image source={card1} style={styles.card} />  */}
 
       </ImageBackground>
 
