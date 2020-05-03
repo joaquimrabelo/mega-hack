@@ -1,6 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
@@ -14,11 +14,12 @@ import card4 from '../assets/images/card4.png';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      {/* <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        
-      </ScrollView> */}
 
       <ImageBackground source={bgMap} style={styles.image}>
+        <View style={styles.barSearch}>
+          <TextInput style={styles.inputSearch} placeholder="Pesquisar"></TextInput>
+        </View>
+
         <Image source={card1} style={styles.card} />
       </ImageBackground>
 
@@ -28,7 +29,7 @@ export default function HomeScreen() {
 }
 
 HomeScreen.navigationOptions = {
-  header: null,
+  header: { visible: false }
 };
 
 /* function handleLearnMorePress() {
@@ -52,6 +53,13 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 300
+  },
+  barSearch: {
+    display: 'flex',
+    backgroundColor: 'red',
+  },
+  inputSearch: {
+    display: 'flex',
   }
   
 });
