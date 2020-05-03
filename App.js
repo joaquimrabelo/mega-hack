@@ -13,8 +13,6 @@ import useLinking from './navigation/useLinking';
 
 import slides from './components/IntroSlider';
 
-/* import GlobalStyle from './GlobalStyle'; */
-
 const Stack = createStackNavigator();
 
 export default function App(props) {
@@ -145,7 +143,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff',
-   
   },
   image: {
     width: 320,
@@ -162,6 +159,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonDone: {
-    color: '#A6BCD0'
+    color: '#A6BCD0',
   }
 });
