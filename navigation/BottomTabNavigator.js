@@ -28,7 +28,7 @@ export default function BottomTabNavigator({ navigation, route }) {
       tabBarOptions={{
         tabStyle: { width: 100 },
         showLabel: false,
-        style: { backgroundColor: '#fff' },
+        style: { backgroundColor: '#fff'},
       }}
     >
       <BottomTab.Screen
@@ -36,7 +36,7 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} icon={IconHome} />,
-        }}
+        }}s
       />
       <BottomTab.Screen
         name="Shop"
