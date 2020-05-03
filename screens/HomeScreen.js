@@ -1,6 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
@@ -19,7 +19,11 @@ export default function HomeScreen() {
       </ScrollView> */}
 
       <ImageBackground source={bgMap} style={styles.image}>
-        <Image source={card1} style={styles.card} />
+        <Text style={styles.mainTitle}>O que você procura?</Text>
+        <TextInput 
+          style={styles.search}
+          value={'Pesquisar...'} />
+        {/* <Image source={card1} style={styles.card} />  */}
       </ImageBackground>
 
       
@@ -48,10 +52,33 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
-    justifyContent: "center"
+    justifyContent: "flex-start"
   },
   card: {
     width: 300
+  },
+  search: {
+    height: 60, 
+    backgroundColor: '#fff',
+    color: '#868686',
+    paddingTop: 10,
+    paddingRight: 30,
+    paddingLeft: 30,
+    paddingBottom: 10,
+    borderBottomRightRadius:30,
+    borderBottomLeftRadius: 30,
+    shadowColor: '#eee',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5
+  },
+  mainTitle: {
+    backgroundColor: '#fff',
+    padding: 10,
+    textAlign: 'center',
+    color: '#748A9D',
+    fontSize: 16,
   }
   
 });
