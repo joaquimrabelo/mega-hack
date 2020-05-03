@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
+import { Input } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
@@ -24,19 +25,27 @@ export default function HomeScreen() {
           <Text style={styles.mainTitle}>O que você precisa?</Text>
           <View style={styles.searchSection}>
 
-            <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} />
+            {/* <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} /> */}
             
 
-            <TextInput
+            <Input
               style={styles.search}
               placeholder={'Pesquisar...'}
-              underlineColorAndroid="transparent"
+              
+              leftIcon={
+                <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} />
+              }
+              rightIcon={
+                <View style={styles.iconBlock}>
+                  <Icon name="microphone" size={20} color="#fff" />
+                </View> 
+              }
                            
             />
 
-            <View style={styles.iconBlock}>
+          {/*   <View style={styles.iconBlock}>
               <Icon name="microphone" size={20} color="#fff" />
-            </View> 
+            </View>  */}
            
 
           </View>
