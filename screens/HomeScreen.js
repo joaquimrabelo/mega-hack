@@ -13,7 +13,12 @@ import bgMap from '../assets/images/map.png';
 
 import imageSlider from '../components/HomeSlider';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
+
+  function handleImagePressed(id) {
+    console.log('image pressed', id);
+    navigation.navigate('ProductScreen', { shop: id });
+  }
   return (
     <View style={styles.container}>
 
@@ -51,7 +56,9 @@ export default function HomeScreen() {
 
         
 
-        <SliderBox images={imageSlider}></SliderBox>
+        <View style={styles.sliderBox}>
+          <SliderBox resizeMode="cover" onCurrentImagePressed={(index) => handleImagePressed(index)} parentWidth={300} images={imageSlider}></SliderBox>
+        </View>
 
       </ImageBackground>
 
@@ -83,6 +90,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
   },
+
   card: {
     width: 300,
   },
@@ -141,12 +149,10 @@ const styles = StyleSheet.create({
 
   },
 
-  slider: {
-    height: 300,
-    position: 'absolute',
-    bottom: 0,
-
-  }
+  sliderBox: {
+    marginLeft: 30,
+    marginRight: 30,
+  },
 
 
 });

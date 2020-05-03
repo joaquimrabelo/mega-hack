@@ -12,6 +12,7 @@ import BottomTabNavigator from './navigation/BottomTabNavigator';
 import useLinking from './navigation/useLinking';
 
 import slides from './components/IntroSlider';
+import ProductScreen from './screens/ProductScreen';
 
 const Stack = createStackNavigator();
 
@@ -123,6 +124,7 @@ export default function App(props) {
                 header: null,
               }}
             />
+            <Stack.Screen name="ProductScreen" component={ProductScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
