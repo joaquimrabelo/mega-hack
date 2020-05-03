@@ -26,7 +26,7 @@ export default function BottomTabNavigator({ navigation, route }) {
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}
       tabBarOptions={{
-        tabStyle: { width: 100 },
+        tabStyle: { width: 100, },
         showLabel: false,
         style: { backgroundColor: '#fff'},
       }}

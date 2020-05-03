@@ -24,19 +24,18 @@ export default function HomeScreen({navigation}) {
 
       <ImageBackground source={bgMap} style={styles.image}>
 
-        <View>
+        <View style={styles.mainBlock}>
+
           <Text style={styles.mainTitle}>O que você precisa?</Text>
           <View style={styles.searchSection}>
 
-            {/* <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} /> */}
-            
-
             <Input
-              style={styles.search}
+              style={styles.searchInput}
               placeholder={'Pesquisar...'}
-              
+              underlineColorAndroid='transparent'
+              inputContainerStyle={{ borderBottomWidth: 0 }}
               leftIcon={
-                <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} />
+                <Icon name="search" size={15} color="#7B7B7B" style={styles.iconSearch} />
               }
               rightIcon={
                 <View style={styles.iconBlock}>
@@ -46,15 +45,8 @@ export default function HomeScreen({navigation}) {
                            
             />
 
-          {/*   <View style={styles.iconBlock}>
-              <Icon name="microphone" size={20} color="#fff" />
-            </View>  */}
-           
-
           </View>
         </View>
-
-        
 
         <View style={styles.sliderBox}>
           <SliderBox resizeMode="cover" onCurrentImagePressed={(index) => handleImagePressed(index)} parentWidth={300} images={imageSlider}></SliderBox>
@@ -94,19 +86,27 @@ const styles = StyleSheet.create({
   card: {
     width: 300,
   },
+  mainBlock: {
+    backgroundColor: '#fff',
+    padding: 10,
+    
 
+    shadowColor: '#eee',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 10,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderWidth: 0,
 
+  },
   searchSection: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
 
-    height: 600,
-    width: '100%',
-    backgroundColor: 'red',
-
- 
   },
 
   mainTitle: {
@@ -119,22 +119,14 @@ const styles = StyleSheet.create({
     height: 90,
   },
 
-  search: {
-    height: 60, 
+  searchInput: {
+    height: 80, 
     backgroundColor: '#fff',
     color: '#868686',
-    paddingTop: 10,
-    paddingRight: 30,
-    paddingLeft: 30,
-    paddingBottom: 10,
-    borderBottomRightRadius:30,
-    borderBottomLeftRadius: 30,
-    borderWidth: 0,
-    shadowColor: '#eee',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.5,
-    shadowRadius: 5,
-    elevation: 10, 
+  
+
+    
+    
     flex: 1,
   },
 
