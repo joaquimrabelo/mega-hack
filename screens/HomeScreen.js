@@ -88,8 +88,7 @@ const styles = StyleSheet.create({
   mainBlock: {
     backgroundColor: '#fff',
     padding: 10,
-    
-
+  
     shadowColor: '#eee',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.5,
@@ -105,7 +104,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-
   },
 
   mainTitle: {
@@ -114,7 +112,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#748A9D',
     fontSize: 16,
-
     height: 90,
   },
 
@@ -122,10 +119,6 @@ const styles = StyleSheet.create({
     height: 80, 
     backgroundColor: '#fff',
     color: '#868686',
-  
-
-    
-    
     flex: 1,
   },
 
@@ -136,13 +129,13 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center', 
-   
-
+  
   },
 
   sliderBox: {
     marginLeft: 30,
     marginRight: 30,
+
   },
 
 
