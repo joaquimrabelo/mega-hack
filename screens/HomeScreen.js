@@ -1,4 +1,7 @@
 import * as WebBrowser from 'expo-web-browser';
+/* import { Ionicons } from '@expo/vector-icons'; */
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -22,7 +25,14 @@ export default function HomeScreen() {
         <Text style={styles.mainTitle}>O que você procura?</Text>
         <TextInput 
           style={styles.search}
-          value={'Pesquisar...'} />
+          placeholder={'Pesquisar...'} />
+
+    
+        <Icon name="search" size={20} color="#900" />
+        <Icon name="microphone" size={20} color="#900" />
+        {/* <Ionicons name="md-search" size={22} color="rgba(0,0,0,0.35)" /> */}
+        {/* <Ionicons name="ios-keyboard-voice" size={22} color="rgba(0,0,0,0.35)" /> */}
+        
         {/* <Image source={card1} style={styles.card} />  */}
       </ImageBackground>
 
