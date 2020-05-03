@@ -16,7 +16,6 @@ import imageSlider from '../components/HomeSlider';
 export default function HomeScreen({navigation}) {
 
   function handleImagePressed(id) {
-    console.log('image pressed', id);
     navigation.navigate('ProductScreen', { shop: id });
   }
   return (
