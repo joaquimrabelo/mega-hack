@@ -51,9 +51,7 @@ export default function HomeScreen() {
 
         
 
-        
-        {/* <Ionicons name="md-search" size={22} color="rgba(0,0,0,0.35)" /> */}
-        {/* <Ionicons name="ios-keyboard-voice" size={22} color="rgba(0,0,0,0.35)" /> */}
+        <SliderBox images={imageSlider}></SliderBox>
 
       </ImageBackground>
 
@@ -75,7 +73,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    justifyContent: 'flex-start',
   },
   contentContainer: {
     paddingTop: 30,
@@ -83,7 +80,8 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
-    justifyContent: "flex-start"
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   card: {
     width: 300,
@@ -142,6 +140,13 @@ const styles = StyleSheet.create({
    
 
   },
+
+  slider: {
+    height: 300,
+    position: 'absolute',
+    bottom: 0,
+
+  }
 
 
 });
