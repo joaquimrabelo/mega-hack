@@ -15,11 +15,11 @@ export function TabBarIconMain({icon}) {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 30,
-    height: 30,
+    width: 24,
+    height: 24,
   },
   iconMain: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
   }
 })
