@@ -104,10 +104,10 @@ export default function App(props) {
         renderNextButton={_renderNextButton}
         renderDoneButton={_renderDoneButton}
         dotStyle={
-          {backgroundColor: 'red'}
+          { backgroundColor: '#A6B8C94D'}
         }
         activeDotStyle={
-          {backgroundColor: 'blue'}
+          { backgroundColor: '#A6BCD0'}
         }
       />
     );
