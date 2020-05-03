@@ -143,7 +143,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff',
-   
   },
   image: {
     width: 320,
@@ -160,6 +159,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonDone: {
-    color: '#A6BCD0'
+    color: '#A6BCD0',
   }
 });

@@ -4,6 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
+import { Input } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SliderBox } from 'react-native-image-slider-box';
 
@@ -18,14 +19,39 @@ export default function HomeScreen() {
 
       <ImageBackground source={bgMap} style={styles.image}>
 
-        <Text style={styles.mainTitle}>O que você procura?</Text>
-        <TextInput 
-          style={styles.search}
-          placeholder={'Pesquisar...'} />
+        <View>
+          <Text style={styles.mainTitle}>O que você precisa?</Text>
+          <View style={styles.searchSection}>
 
-    
-        <Icon name="search" size={20} color="#900" />
-        <Icon name="microphone" size={20} color="#900" />
+            {/* <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} /> */}
+            
+
+            <Input
+              style={styles.search}
+              placeholder={'Pesquisar...'}
+              
+              leftIcon={
+                <Icon name="search" size={20} color="#7B7B7B" style={styles.iconSearch} />
+              }
+              rightIcon={
+                <View style={styles.iconBlock}>
+                  <Icon name="microphone" size={20} color="#fff" />
+                </View> 
+              }
+                           
+            />
+
+          {/*   <View style={styles.iconBlock}>
+              <Icon name="microphone" size={20} color="#fff" />
+            </View>  */}
+           
+
+          </View>
+        </View>
+
+        
+
+        
         {/* <Ionicons name="md-search" size={22} color="rgba(0,0,0,0.35)" /> */}
         {/* <Ionicons name="ios-keyboard-voice" size={22} color="rgba(0,0,0,0.35)" /> */}
 
@@ -49,7 +75,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    
+    justifyContent: 'flex-start',
   },
   contentContainer: {
     paddingTop: 30,
@@ -60,8 +86,33 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start"
   },
   card: {
-    width: 300
+    width: 300,
   },
+
+
+  searchSection: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    height: 600,
+    width: '100%',
+    backgroundColor: 'red',
+
+ 
+  },
+
+  mainTitle: {
+    backgroundColor: '#fff',
+    padding: 20,
+    textAlign: 'center',
+    color: '#748A9D',
+    fontSize: 16,
+
+    height: 90,
+  },
+
   search: {
     height: 60, 
     backgroundColor: '#fff',
@@ -72,17 +123,25 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     borderBottomRightRadius:30,
     borderBottomLeftRadius: 30,
+    borderWidth: 0,
     shadowColor: '#eee',
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 2,
-    elevation: 5
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 10, 
+    flex: 1,
   },
-  mainTitle: {
-    backgroundColor: '#fff',
-    padding: 10,
-    textAlign: 'center',
-    color: '#748A9D',
-    fontSize: 16,
-  }
+
+  iconBlock: {
+    backgroundColor: '#7BED8D',
+    width: 30,
+    height: 30,
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center', 
+   
+
+  },
+
+
 });
