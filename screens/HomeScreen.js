@@ -1,9 +1,8 @@
 import * as WebBrowser from 'expo-web-browser';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
 import { Input } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SliderBox } from 'react-native-image-slider-box';
@@ -98,7 +97,6 @@ const styles = StyleSheet.create({
   mainBlock: {
     backgroundColor: '#fff',
     padding: 10,
-  
     shadowColor: '#eee',
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.5,
@@ -107,7 +105,6 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
     borderBottomLeftRadius: 20,
     borderWidth: 0,
-
   },
   searchSection: {
     flex: 1,
@@ -115,7 +112,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   mainTitle: {
     backgroundColor: '#fff',
     padding: 20,
@@ -124,14 +120,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     height: 90,
   },
-
   searchInput: {
     height: 80, 
     backgroundColor: '#fff',
     color: '#868686',
     flex: 1,
   },
-
   iconBlock: {
     backgroundColor: '#7BED8D',
     width: 30,
@@ -139,9 +133,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center', 
-  
   },
-
   sliderBox: {
     marginLeft: 30,
     marginRight: 30,
@@ -149,6 +141,5 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     overflow: 'hidden'
   },
-
 
 });

@@ -1,6 +1,6 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -14,16 +14,37 @@ export default function ProductScreen({navigation}) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.navTop}>
-        <TouchableOpacity onPress={handleBackToHome} style={styles.backButton}>
-          <Icon name="arrow-left" size={16} color="#748A9D" />
-        </TouchableOpacity>
-        <Text style={styles.navTitle}>Supermercado</Text>
+
+      <View style={styles.navTopBlock}>
+
+        <View style={styles.navTop}>
+          <TouchableOpacity onPress={handleBackToHome} style={styles.backButton}>
+            <Icon name="arrow-left" size={14} color="#748A9D" />
+          </TouchableOpacity>
+          <Text style={styles.navTitle}>Supermercado</Text>
+        </View>
+
+        <View style={styles.filterBlock}>
+          <FlatList
+            horizontal={true}
+            data={[
+              { key: 'Tudo' },
+              { key: 'Mercearia' },
+              { key: 'Hortifruti' },
+              { key: 'Açougue' },
+
+            ]}
+            renderItem={({ item }) => <Text style={styles.filterItem}>{item.key}</Text>}
+          />
+        </View>
+
+
       </View>
+      
 
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text style={styles.categoryTitle}>Sugestões para você</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -69,10 +90,56 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage}
+                source={require('../assets/images/products/alface.png')}
+                resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage}
+                source={require('../assets/images/products/maca.png')}
+                resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage}
+                source={require('../assets/images/products/tomate.png')}
+                resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+
         </ScrollView>
 
         <Text style={styles.categoryTitle}>Mercearia</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -118,10 +185,40 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage}
+                source={require('../assets/images/products/pizza.png')}
+                resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage}
+                source={require('../assets/images/products/toddy.png')}
+                resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
         </ScrollView>
 
         <Text style={styles.categoryTitle}>Hortifruti</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -170,7 +267,7 @@ export default function ProductScreen({navigation}) {
         </ScrollView>
 
         <Text style={styles.categoryTitle}>Açougue</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -219,7 +316,7 @@ export default function ProductScreen({navigation}) {
         </ScrollView>
 
         <Text style={styles.categoryTitle}>Bebidas</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -268,7 +365,7 @@ export default function ProductScreen({navigation}) {
         </ScrollView>
 
         <Text style={styles.categoryTitle}>Limpeza</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -317,7 +414,7 @@ export default function ProductScreen({navigation}) {
         </ScrollView>
 
         <Text style={styles.categoryTitle}>Higiene e Beleza</Text>
-        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+        <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
@@ -462,6 +559,31 @@ const styles = StyleSheet.create({
     color: '#272a3f',
     fontSize: 10,
     fontWeight: 'bold',
+  },
+  navTopBlock: {
+    shadowColor: '#eee',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.5,
+    shadowRadius: 5,
+    elevation: 10,
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+    borderWidth: 0,
+    overflow: 'hidden'
+  },
+  filterBlock: {
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+
+  },
+  filterItem: {
+    color: '#A6BCD0',
+    padding: 10,
+    fontSize: 16,
+    
   }
   
 });
