@@ -129,7 +129,7 @@ export default function ProductScreen({navigation}) {
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/alface.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -144,7 +144,7 @@ export default function ProductScreen({navigation}) {
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/maca.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -159,7 +159,7 @@ export default function ProductScreen({navigation}) {
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/tomate.png')}
               resizeMethod="scale"
               ></Image>
             </View>
