@@ -12,7 +12,7 @@ export default function CartScreen() {
         
       </ScrollView> */}
 
-      <Text>Cart</Text>
+      <Text>Carrinho</Text>
     </View>
   );
 }

@@ -135,7 +135,9 @@ const styles = StyleSheet.create({
   sliderBox: {
     marginLeft: 30,
     marginRight: 30,
-
+    marginBottom: 30,
+    borderRadius: 10,
+    overflow: 'hidden'
   },
 
 

@@ -12,7 +12,7 @@ export default function ConfigScreen() {
         
       </ScrollView> */}
 
-      <Text>Config</Text>
+      <Text>Configurações</Text>
     </View>
   );
 }
