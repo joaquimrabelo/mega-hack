@@ -11,6 +11,10 @@ export default function ProductScreen({navigation}) {
   function handleBackToHome() {
     navigation.navigate('HomeScreen');
   }
+  
+  function handleOpenProduct() {
+    navigation.navigate('ProductDetailScreen');
+  }
 
   return (
     <View style={styles.container}>
@@ -45,7 +49,7 @@ export default function ProductScreen({navigation}) {
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <Text style={styles.categoryTitle}>Sugestões para você</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -60,7 +64,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -75,7 +79,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -90,7 +94,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -105,7 +109,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -120,7 +124,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -140,7 +144,7 @@ export default function ProductScreen({navigation}) {
 
         <Text style={styles.categoryTitle}>Mercearia</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -155,7 +159,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -170,7 +174,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -185,7 +189,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -200,7 +204,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -219,7 +223,7 @@ export default function ProductScreen({navigation}) {
 
         <Text style={styles.categoryTitle}>Hortifruti</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -234,7 +238,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -249,7 +253,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -268,7 +272,7 @@ export default function ProductScreen({navigation}) {
 
         <Text style={styles.categoryTitle}>Açougue</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -283,7 +287,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -298,7 +302,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -317,7 +321,7 @@ export default function ProductScreen({navigation}) {
 
         <Text style={styles.categoryTitle}>Bebidas</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -332,7 +336,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -347,7 +351,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -366,7 +370,7 @@ export default function ProductScreen({navigation}) {
 
         <Text style={styles.categoryTitle}>Limpeza</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -381,7 +385,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -396,7 +400,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -415,7 +419,7 @@ export default function ProductScreen({navigation}) {
 
         <Text style={styles.categoryTitle}>Higiene e Beleza</Text>
         <ScrollView horizontal style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -430,7 +434,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
           
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />
@@ -445,7 +449,7 @@ export default function ProductScreen({navigation}) {
             <Text style={styles.productPrice}>R$ 99,99</Text>
           </View>
 
-          <View style={styles.product}>
+          <View onStartShouldSetResponder={handleOpenProduct} style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
               <Icon name="heart-o" size={16} color="#D8DAE0" />

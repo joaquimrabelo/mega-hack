@@ -14,6 +14,7 @@ import useLinking from './navigation/useLinking';
 import slides from './components/IntroSlider';
 import ProductScreen from './screens/ProductScreen';
 import HomeScreen from './screens/HomeScreen';
+import ProductDetailScreen from './screens/ProductDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -127,6 +128,7 @@ export default function App(props) {
             />
             <Stack.Screen name="ProductScreen" component={ProductScreen} />
             <Stack.Screen name="HomeScreen" component={HomeScreen} />
+            <Stack.Screen name="ProductDetailScreen" component={ProductDetailScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
