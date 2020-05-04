@@ -22,8 +22,349 @@ export default function ProductScreen({navigation}) {
       </View>
 
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-        
-      <Text>Product</Text>
+        <Text style={styles.categoryTitle}>Sugestões para você</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
+        <Text style={styles.categoryTitle}>Mercearia</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
+        <Text style={styles.categoryTitle}>Hortifruti</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
+        <Text style={styles.categoryTitle}>Açougue</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
+        <Text style={styles.categoryTitle}>Bebidas</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
+        <Text style={styles.categoryTitle}>Limpeza</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
+        <Text style={styles.categoryTitle}>Higiene e Beleza</Text>
+        <ScrollView horizontal="true" style={styles.rowProduct} contentContainerStyle={styles.rowProductScroll}>
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+          
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+          <View style={styles.product}>
+            <View style={styles.productTop}>
+              <Text style={styles.productTopUn}>1UN</Text>
+              <Icon name="heart-o" size={16} color="#000" />
+            </View>
+            <View style={styles.productImageView}>
+              <Image style={styles.productImage} 
+              source={require('../assets/images/products/cafe.png')}
+              resizeMethod="scale"
+              ></Image>
+            </View>
+            <Text style={styles.productName}>Nescafé Classic</Text>
+            <Text style={styles.productPrice}>R$ 99,99</Text>
+          </View>
+
+        </ScrollView>
+
       </ScrollView>
 
     </View>
@@ -45,7 +386,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   navTop: {
     backgroundColor: '#fff',
@@ -61,6 +403,58 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     color: '#000',
     fontSize: 18
+  },
+  categoryTitle: {
+    color: '#272a3f',
+    paddingTop: 10,
+    paddingBottom: 10,
+    fontSize: 14,
+  },
+  rowProduct: {
+    height: 144,
+  },
+  rowProductScroll: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  product: {
+    backgroundColor: '#f0f4f8',
+    width: 104,
+    height: 144,
+    marginRight: 10,
+    borderRadius: 10,
+  },
+  productTop: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 5,
+  },
+  productTopUn: {
+    backgroundColor: '#d8dae0',
+    borderRadius: 3,
+    paddingLeft: 3,
+    paddingRight: 3,
+  },
+  productImageView: {
+    height: 80,
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  productImage: {
+    height: 80,
+    resizeMode: 'contain',
+  },
+  productName: {
+    paddingLeft: 5,
+    color: '#6e7989',
+    fontSize: 10,
+  },
+  productPrice: {
+    paddingLeft: 5,
+    color: '#272a3f',
+    fontSize: 10,
+    fontWeight: 'bold',
   }
   
 });
