@@ -15,14 +15,42 @@ export default function ProductDetailScreen({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.navTop}>
-          <TouchableOpacity onPress={handleBackToShop} style={styles.backButton}>
-            <Icon name="arrow-left" size={14} color="#748A9D" />
-          </TouchableOpacity>
-          <Text style={styles.navTitle}>Tomate</Text>
-        </View>
+        <TouchableOpacity onPress={handleBackToShop} style={styles.backButton}>
+          <Icon name="arrow-left" size={14} color="#748A9D" />
+        </TouchableOpacity>
+        <Text style={styles.navTitle}>Tomate</Text>
+      </View>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         
-      <Text>Tomate</Text>
+        <Image source={require('../assets/images/products/tomate1.png')} />
+
+        <View style={styles.selectQuant}>
+          <Text style={styles.selectQuantInfo}>
+            Tomate
+          </Text>
+
+          <View style={styles.selectControls}>
+            <Text style={styles.selectQuantInfo}>
+              2
+          </Text>
+            <Text style={styles.selectQuantInfo}>
+              unidade
+          </Text>
+            <Text style={styles.selectQuantInfo}>
+              R$ 0,99
+          </Text>
+          </View>
+
+        </View>
+
+        <TouchableOpacity style={styles.submitButton}>
+          <View>
+         {/*  <Icon name="arrow-right" size={14} color="#fff" /> */}
+
+          <Text style={styles.buttonText}>Selecionar</Text>
+          </View>
+        </TouchableOpacity>
+
       </ScrollView>
 
     </View>
@@ -45,6 +73,8 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+    paddingRight: 15,
+    paddingLeft: 15,
   },
   navTop: {
     backgroundColor: '#fff',
@@ -52,6 +82,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    textAlign: 'center'
   },
   backButton: {
     paddingLeft: 10,
@@ -59,7 +90,39 @@ const styles = StyleSheet.create({
   navTitle: {
     paddingLeft: 20,
     color: '#748A9D',
-    fontSize: 18
+    fontSize: 18,
+    textAlign: 'center'
   },
+  submitButton: {
+    backgroundColor: '#7BED8D',
+    color: '#fff',
+    height: 60,
+    borderRadius: 40,
+    textAlign: "center",
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  buttonText: {
+    color: '#fff',
+    textTransform: 'uppercase',
+    fontWeight: 'bold'
+  },
+  selectQuant: {
+    backgroundColor: '#F0F4F8',
+    borderRadius: 8,
+    padding: 20,
+    marginBottom: 20
+
+  },
+  selectQuantInfo: {
+    color: '#748A9D',
+    paddingTop: 10
+  },
+  selectControls: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  }
+
   
 });
