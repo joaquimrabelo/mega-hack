@@ -16,7 +16,7 @@ export default function ProductScreen({navigation}) {
     <View style={styles.container}>
       <View style={styles.navTop}>
         <TouchableOpacity onPress={handleBackToHome} style={styles.backButton}>
-          <Icon name="arrow-left" size={16} color="#000" />
+          <Icon name="arrow-left" size={16} color="#748A9D" />
         </TouchableOpacity>
         <Text style={styles.navTitle}>Supermercado</Text>
       </View>
@@ -27,11 +27,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/cafe1.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -42,11 +42,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+                source={require('../assets/images/products/redbull.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -57,7 +57,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -76,11 +76,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/manteiga.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -91,11 +91,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/pizza.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -106,11 +106,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/toddy.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -125,7 +125,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -140,7 +140,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -155,7 +155,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -174,7 +174,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -189,7 +189,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -204,7 +204,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -223,11 +223,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/skollbeats.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -238,11 +238,11 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
-              source={require('../assets/images/products/cafe.png')}
+              source={require('../assets/images/products/fanta.png')}
               resizeMethod="scale"
               ></Image>
             </View>
@@ -253,7 +253,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -272,7 +272,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -287,7 +287,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -302,7 +302,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -321,7 +321,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -336,7 +336,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -351,7 +351,7 @@ export default function ProductScreen({navigation}) {
           <View style={styles.product}>
             <View style={styles.productTop}>
               <Text style={styles.productTopUn}>1UN</Text>
-              <Icon name="heart-o" size={16} color="#000" />
+              <Icon name="heart-o" size={16} color="#D8DAE0" />
             </View>
             <View style={styles.productImageView}>
               <Image style={styles.productImage} 
@@ -401,7 +401,7 @@ const styles = StyleSheet.create({
   },
   navTitle: {
     paddingLeft: 20,
-    color: '#000',
+    color: '#748A9D',
     fontSize: 18
   },
   categoryTitle: {
@@ -409,6 +409,8 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10,
     fontSize: 14,
+    fontWeight: 'bold',
+    marginTop: 15,
   },
   rowProduct: {
     height: 144,
@@ -422,18 +424,22 @@ const styles = StyleSheet.create({
     width: 104,
     height: 144,
     marginRight: 10,
-    borderRadius: 10,
+    borderRadius: 5,
   },
   productTop: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 5,
+    alignItems: 'center',
   },
   productTopUn: {
     backgroundColor: '#d8dae0',
-    borderRadius: 3,
-    paddingLeft: 3,
-    paddingRight: 3,
+    borderRadius: 2,
+    padding: 3,
+    fontSize: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+  
   },
   productImageView: {
     height: 80,
@@ -444,6 +450,7 @@ const styles = StyleSheet.create({
   productImage: {
     height: 80,
     resizeMode: 'contain',
+    
   },
   productName: {
     paddingLeft: 5,
