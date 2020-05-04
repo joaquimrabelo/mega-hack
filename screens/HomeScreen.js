@@ -1,5 +1,4 @@
 import * as WebBrowser from 'expo-web-browser';
-/* import { Ionicons } from '@expo/vector-icons'; */
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import * as React from 'react';
@@ -26,25 +25,26 @@ export default function HomeScreen({navigation}) {
         <View style={styles.mainBlock}>
 
           <Text style={styles.mainTitle}>O que você precisa?</Text>
-          <View style={styles.searchSection}>
+          
+            <View style={styles.searchSection}>
+            
+              <Input
+                style={styles.searchInput}
+                placeholder={'Pesquisar...'}
+                underlineColorAndroid='transparent'
+                inputContainerStyle={{ borderBottomWidth: 0 }}
+                leftIcon={
+                  <Icon name="search" size={15} color="#7B7B7B" style={styles.iconSearch} />
+                }
+                rightIcon={
+                  <View style={styles.iconBlock}>
+                    <Icon name="microphone" size={20} color="#fff" />
+                  </View> 
+                }
+                            
+              />
 
-            <Input
-              style={styles.searchInput}
-              placeholder={'Pesquisar...'}
-              underlineColorAndroid='transparent'
-              inputContainerStyle={{ borderBottomWidth: 0 }}
-              leftIcon={
-                <Icon name="search" size={15} color="#7B7B7B" style={styles.iconSearch} />
-              }
-              rightIcon={
-                <View style={styles.iconBlock}>
-                  <Icon name="microphone" size={20} color="#fff" />
-                </View> 
-              }
-                           
-            />
-
-          </View>
+          </View> 
         </View>
 
         <View style={styles.sliderBox}>

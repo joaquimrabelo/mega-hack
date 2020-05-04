@@ -1,7 +1,7 @@
 const slides = [
   {
     key: '1',
-    text: 'Description.\nSay something cool',
+    text: 'Description.\n',
     image: require('../assets/images/onboarding1.png'),
     backgroundColor: '#59b2ab',
   },
@@ -13,7 +13,7 @@ const slides = [
   },
   {
     key: '3',
-    text: 'I\'m already out of descriptions\n\nLorem ipsum bla bla bla',
+    text: 'I\'m already out of descriptions\n\nLorem ipsum',
     image: require('../assets/images/onboarding2.png'),
     backgroundColor: '#22bcb5',
   }
