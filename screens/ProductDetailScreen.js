@@ -25,20 +25,39 @@ export default function ProductDetailScreen({navigation}) {
         <Image source={require('../assets/images/products/tomate1.png')} />
 
         <View style={styles.selectQuant}>
-          <Text style={styles.selectQuantInfo}>
-            Tomate
-          </Text>
+
+          <View style={styles.selectProduct}>
+            <Text style={styles.selectQuantInfo}>
+              Tomate
+            </Text>
+            <Icon name="angle-up" size={14} color="#748A9D" />
+
+          </View>
+         
+
+          <View style={styles.selectIcons}>
+            <Icon name="angle-up" size={14} color="#748A9D" />
+            <Icon name="angle-up" size={14} color="#748A9D" />
+            <Icon name="angle-up" size={14} color="#748A9D" />
+          </View>
 
           <View style={styles.selectControls}>
+
             <Text style={styles.selectQuantInfo}>
               2
-          </Text>
+            </Text>
             <Text style={styles.selectQuantInfo}>
               unidade
-          </Text>
+            </Text>
             <Text style={styles.selectQuantInfo}>
               R$ 0,99
-          </Text>
+            </Text>
+          </View>
+
+          <View style={styles.selectIcons}>
+            <Icon name="angle-down" size={14} color="#748A9D" />
+            <Icon name="angle-down" size={14} color="#748A9D" />
+            <Icon name="angle-down" size={14} color="#748A9D" />
           </View>
 
         </View>
@@ -116,12 +135,26 @@ const styles = StyleSheet.create({
   },
   selectQuantInfo: {
     color: '#748A9D',
-    paddingTop: 10
+    paddingTop: 10,
+  },
+  selectProduct: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingBottom: 20
   },
   selectControls: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    
+  },
+  selectIcons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingTop: 10,
+   
   }
 
   
