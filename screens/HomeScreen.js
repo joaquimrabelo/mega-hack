@@ -1,6 +1,7 @@
 import * as WebBrowser from 'expo-web-browser';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
+
 import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, ImageBackground, TextInput } from 'react-native';
 import { Input } from 'react-native-elements';
@@ -38,7 +39,8 @@ export default function HomeScreen({navigation}) {
                 }
                 rightIcon={
                   <View style={styles.iconBlock}>
-                    <Icon name="microphone" size={20} color="#fff" />
+                    {/* <Icon name="mic_none" size={16} color="#fff" /> */}
+                    <Image source={require('../assets/images/mic.png')} style={{width: 14, height: 20}} />
                   </View> 
                 }
                             
@@ -48,7 +50,15 @@ export default function HomeScreen({navigation}) {
         </View>
 
         <View style={styles.sliderBox}>
-          <SliderBox resizeMode="cover" onCurrentImagePressed={(index) => handleImagePressed(index)} parentWidth={300} images={imageSlider}></SliderBox>
+          <SliderBox 
+            resizeMode={'cover'}
+            onCurrentImagePressed={(index) => handleImagePressed(index)} 
+            parentWidth={300} 
+            images={imageSlider}
+              
+            >
+
+          </SliderBox>
         </View>
 
       </ImageBackground>
